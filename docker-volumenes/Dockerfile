@@ -30,9 +30,11 @@ ENV APACHE_SERVERNAME localhost
 ENV APACHE_SERVERALIAS docker.localhost
 ENV APACHE_DOCUMENTROOT /var/www
 
+
 VOLUME /webapps
 
 ADD ./index.html /webapps/index.html
+
 
 EXPOSE 80
 ADD ./scripts/info.php /var/www/html/info.php
