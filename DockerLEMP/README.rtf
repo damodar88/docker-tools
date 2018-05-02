@@ -9,3 +9,10 @@ apache nginx
 docker-compose up -d
 docker-compose exec mysql sh
 #mysql -u root -p
+
+
+
+Error de phpmayadmin
+
+Tal y como dice el mensaje hay que revisar el archivo config.inc.php que se encuentra en la siguiente dirección C:\xampp\phpMyAdmin.
+En la linea que dice $cfg['Servers'][$i]['password'] = ''; entre las comillas simples especificamos las password que pusimos al user correspondiente es decir la misma que habiamos puesto en el formulario anterior cuando podiamos entrar en phpmyadmin. Además también es necesario que cambies el valor de "config" por "cookie" en $cfg['Servers'][$i]['auth_type'] = 'cookie'. Finalmente ya con esto deberia estar solucionado.

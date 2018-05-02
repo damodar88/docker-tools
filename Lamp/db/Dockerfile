@@ -1,5 +1,0 @@
-FROM mysql:latest
-
-ENV MYSQL_ROOT_PASSWORD oretania
-
-EXPOSE 3306
